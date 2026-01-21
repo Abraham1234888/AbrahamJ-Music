@@ -20,6 +20,10 @@ body{
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .grid{
     display: grid;
     justify-content: space-around;
@@ -120,4 +124,25 @@ p{
     font-size: large;
     font-weight: bolder;
     font-style: italic;
+}
+
+img{
+    background-color: aliceblue;
+}
+
+#heartbeat{
+    transition: transform 0.2s ease-in-out;
+}
+
+.heartbeat{
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }

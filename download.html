@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Music</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+ <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./About.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./lyrics.html">Song Lyrics</a>
+        <a href="./download.html">Download My Songs</a>
+
+     
+    </nav>
+<body>
+    <h1>Download My Songs</h1>
+    <div class="song">
+        <img src="./Assets/Supernatural Life-pix.jpg" alt="pix" width="200">
+        <h3>Supernatural Life</h3>
+
+        <audio controls>
+            <source src="./Assets/Supernatural Life.mp3" type="audio/mpeg">
+
+        </audio>
+        <br>
+
+        <button onclick='payForSong("./Assets/Supernatural Life.mp3" ,500)'>Download</button>
+            
+     </div>
+
+    <br>
+    <div class="song"></div>
+    <img src="./Assets/You Alone Are God pix.jpg" alt="pix" width="200">
+
+    
+    <h3>You Alone Are God</h3>
+
+    <audio controls>
+        <source src="./Assets/You Alone Are God.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+
+    <button onclick="payForSong('./Assets/You Alone Are God.mp3', 500)">Download</button>
+    </div>
+    <br><br>
+
+
+    <div class="song">
+        <img src="./Assets/the name pic.jpeg" alt="pix" width="200">
+        <h3>The Name of Jesus</h3>
+
+        <audio controls>
+            <source src="./Assets/The Name of Jesus.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+
+        <button onclick="payForSong('./Assets/The Name of Jesus.mp3', 500)">Download</button>
+
+    </div>
+
+
+
+    <div class="song">
+        <img src="./Assets/let your name pic.jpeg" alt="pix" width="200">
+        <h3>Let Your Name Be Praised</h3>
+
+        <audio controls>
+            <source src="./Assets/Let Your Name Be Praised.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+
+    <button onclick="payForSong('./Assets/Let Your Name Be Praised.mp3', 500)">Download</button>
+     </div>
+
+     <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Download</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <script>
+        // Validate payment IMMEDIATELY before page renders
+        if(sessionStorage.getItem('paid') !== 'yes') {
+            sessionStorage.clear();
+            window.location.replace('./download.html');
+            throw new Error('Unauthorized access');
+        }
+    </script>
+
+
+</head>
+<body>
+    <h2>Thank you for your support</h2>
+    <p>Your download will start shortly.</p>
+
+    <a id="downloadLink"></a>
+
+    <script>
+        const file = sessionStorage.getItem('songFile');
+
+        if (!file) {
+            sessionStorage.clear();
+            window.location.href = './download.html';
+        } else {
+            const link = document.getElementById('downloadLink');
+            link.href = file;
+            link.download = file.split('/').pop();
+            link.textContent = 'Click here if download does not start';
+
+            link.click();
+
+            // Clear session data after starting download
+            sessionStorage.clear();
+        }
+    </script>
+    
+</body>
+</html>
